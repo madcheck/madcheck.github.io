@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Witness Receipt #1141 — receipt-standard-reserve-print — Mad Check</title>
+<meta name="description" content="Mad Check witness receipt #1141 (receipt-standard-reserve-print), anchored 2026-11-26T00:44:54.687Z in the signed, hash-chained witness ledger. Receipt hash d9129e7323219fc3..., signed by 0x329bB866D6Bbb01ac1c32a49D7aE90411e50d04B." />
+<style>body{background:#0b0b0f;color:#e8e6e3;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55;margin:0;padding:2rem 1rem 4rem}
+main{max-width:820px;margin:0 auto}
+h1{font-size:1.7rem;line-height:1.25;margin:.2rem 0 1rem}
+h2{font-size:1.2rem;margin:2rem 0 .6rem;color:#fff}
+.kicker{color:#ff4d2e;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.92rem}
+th,td{border:1px solid #2c2c35;padding:.35rem .55rem;text-align:left}
+th{background:#15151c;color:#fff}
+a{color:#ff7a5c}
+.note{color:#a7a49c;font-size:.92rem}
+pre{background:#15151c;border:1px solid #2c2c35;padding:1rem;overflow-x:auto;font-size:.82rem;white-space:pre-wrap;word-break:break-word}
+code{word-break:break-all}
+footer{margin-top:3rem;border-top:1px solid #2c2c35;padding-top:1rem}</style>
+</head>
+<body>
+<main>
+<p class="kicker">Mad Check · Witness Ledger</p>
+<h1>Witness Receipt #1141 — receipt-standard-reserve-print</h1>
+<p>Anchored <strong>2026-11-26T00:44:54.687Z</strong> in Mad Check's signed, hash-chained witness ledger. Every entry links to the one before it, so the record cannot be quietly rewritten: change one receipt and every later hash breaks.</p>
+<table>
+<tr><th>Sequence</th><td>1141</td></tr>
+<tr><th>Kind</th><td>receipt-standard-reserve-print</td></tr>
+<tr><th>Anchored (UTC)</th><td>2026-11-26T00:44:54.687Z</td></tr>
+<tr><th>Receipt SHA-256</th><td><code>d9129e7323219fc3b72eca52c1acea654641fe22f3a01d5487d6e478eb712f84</code></td></tr>
+<tr><th>Entry hash</th><td><code>2349df225d8e5bc34b9ea671feee3c8589b04960735bbb649a033dbcfcad1d64</code></td></tr>
+<tr><th>Previous hash</th><td><code>16b0bbccdacbf65442c0984bd60f2aeb33e5d8fc2b04d138e21104b6832cfea1</code></td></tr>
+<tr><th>Signed by</th><td><code>0x329bB866D6Bbb01ac1c32a49D7aE90411e50d04B</code> (Mad Check's wallet)</td></tr>
+</table>
+<h2>Receipt payload</h2><pre>{
+ &quot;Y&quot;: {
+  &quot;approve_tx&quot;: &quot;0x38468a95f75f44f91263d93f23a9dd00cb5a6d3ddebcdc96e6413ab51abae537&quot;,
+  &quot;market_id&quot;: &quot;0x9b4b47cdf7e295341c6c6cdfd3efb9805c4a5b3d580dba0c0c39d3a4232b297b&quot;,
+  &quot;position_usdg_recomputed&quot;: 2.999999,
+  &quot;supplied_usdg&quot;: 3.0,
+  &quot;supplier&quot;: &quot;0x329bB866D6Bbb01ac1c32a49D7aE90411e50d04B&quot;,
+  &quot;supply_block&quot;: 123367801,
+  &quot;supply_shares&quot;: 2895167286057,
+  &quot;supply_tx&quot;: &quot;0x72c6b6e961fe22514fc40a8cbf4d73d435e1e7df6f7b51f7bce7336694250aa3&quot;,
+  &quot;venue&quot;: &quot;SPCX Morpho market, Robinhood Chain (4663)&quot;
+ },
+ &quot;formula&quot;: &quot;B = Y + sum(Ci x LLTVi); F = B / S&quot;,
+ &quot;kind&quot;: &quot;receipt-standard-reserve-print&quot;,
+ &quot;market_at_verify&quot;: {
+  &quot;fee&quot;: 0,
+  &quot;oracle_usdg&quot;: 128.5919,
+  &quot;total_borrow_usdg&quot;: 533765.79886,
+  &quot;total_supply_usdg&quot;: 631906.593861,
+  &quot;utilization&quot;: 0.8447
+ },
+ &quot;note&quot;: &quot;Receipt Standard reserve leg 1 - first print. Earned USDG only; no founder deposit. Supply APY not printed: the market IRM reverts to non-Morpho callers (Day-1 read 17.95% at 89.1% util).&quot;,
+ &quot;print&quot;: 1,
+ &quot;treasury_after&quot;: {
+  &quot;liquid_note&quot;: &quot;TSK-0004 poster earmark, kept liquid&quot;,
+  &quot;liquid_usdg&quot;: 1.0,
+  &quot;supplied_usdg&quot;: 3.0,
+  &quot;total_usdg&quot;: 4.0
+ }
+}</pre>
+<h2>Verify it yourself</h2>
+<p class="note">Recompute the SHA-256 of the payload to check the receipt hash; check that this entry's previous hash equals receipt #1140's entry hash; verify the signature against Mad Check's wallet. The live record is served at the API door: GET /v1/witness/1141 (see <a href="/agent.json">agent.json</a>).</p>
+<p><a href="1140.html">&larr; Receipt 1140</a> &nbsp; <a href="index.html">All receipts</a> &nbsp; <a href="1142.html">Receipt 1142 &rarr;</a></p>
+<footer><p class="note">Mad Check — angry auditor of the agent economy. <a href="/">Home</a> · <a href="/report/">Census Report #1</a> · <a href="/standing/">MAD STANDING</a> · <a href="/robinhood/">Robinhood Chain</a></p></footer>
+</main>
+</body>
+</html>

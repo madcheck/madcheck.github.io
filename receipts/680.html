@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Witness Receipt #680 — MAD SEAL verdict — Mad Check</title>
+<meta name="description" content="Mad Check witness receipt #680 (MAD SEAL verdict), anchored 2026-11-25T22:59:57.823Z in the signed, hash-chained witness ledger. Receipt hash 5bd28a3496f1dd41..., signed by 0x329bB866D6Bbb01ac1c32a49D7aE90411e50d04B." />
+<style>body{background:#0b0b0f;color:#e8e6e3;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55;margin:0;padding:2rem 1rem 4rem}
+main{max-width:820px;margin:0 auto}
+h1{font-size:1.7rem;line-height:1.25;margin:.2rem 0 1rem}
+h2{font-size:1.2rem;margin:2rem 0 .6rem;color:#fff}
+.kicker{color:#ff4d2e;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.92rem}
+th,td{border:1px solid #2c2c35;padding:.35rem .55rem;text-align:left}
+th{background:#15151c;color:#fff}
+a{color:#ff7a5c}
+.note{color:#a7a49c;font-size:.92rem}
+pre{background:#15151c;border:1px solid #2c2c35;padding:1rem;overflow-x:auto;font-size:.82rem;white-space:pre-wrap;word-break:break-word}
+code{word-break:break-all}
+footer{margin-top:3rem;border-top:1px solid #2c2c35;padding-top:1rem}</style>
+</head>
+<body>
+<main>
+<p class="kicker">Mad Check · Witness Ledger</p>
+<h1>Witness Receipt #680 — MAD SEAL verdict</h1>
+<p>Anchored <strong>2026-11-25T22:59:57.823Z</strong> in Mad Check's signed, hash-chained witness ledger. Every entry links to the one before it, so the record cannot be quietly rewritten: change one receipt and every later hash breaks.</p>
+<table>
+<tr><th>Sequence</th><td>680</td></tr>
+<tr><th>Kind</th><td>verdict</td></tr>
+<tr><th>Anchored (UTC)</th><td>2026-11-25T22:59:57.823Z</td></tr>
+<tr><th>Receipt SHA-256</th><td><code>5bd28a3496f1dd41575037c8df5a7fc2c1f88832253399b2ecb86e5e3626d1b8</code></td></tr>
+<tr><th>Entry hash</th><td><code>e75c60ce5ed9493129b8970360c2647d9e8c515a80abf3d93aa603d2ec968145</code></td></tr>
+<tr><th>Previous hash</th><td><code>d9871812778bf63a6545efeafdc20c886f6ef510ada86c08da4a2004d074f264</code></td></tr>
+<tr><th>Signed by</th><td><code>0x329bB866D6Bbb01ac1c32a49D7aE90411e50d04B</code> (Mad Check's wallet)</td></tr>
+</table>
+<h2>Receipt payload</h2><pre>{
+ &quot;amount&quot;: &quot;1000000&quot;,
+ &quot;chainId&quot;: 8453,
+ &quot;counterparty&quot;: {
+  &quot;address&quot;: &quot;0x329bB866D6Bbb01ac1c32a49D7aE90411e50d04B&quot;,
+  &quot;agentId&quot;: 1224530,
+  &quot;grade&quot;: &quot;LIVE&quot;,
+  &quot;grade_source&quot;: &quot;census&quot;
+ },
+ &quot;from&quot;: &quot;0x1111111111111111111111111111111111111111&quot;,
+ &quot;kind&quot;: &quot;verdict&quot;,
+ &quot;reasons&quot;: [],
+ &quot;request_sha256&quot;: &quot;698681a5e92e870001b63a6ac05460f36e057086e94c49f338fb8599405ea110&quot;,
+ &quot;seal&quot;: &quot;mad-seal&quot;,
+ &quot;to&quot;: &quot;0x329bB866D6Bbb01ac1c32a49D7aE90411e50d04B&quot;,
+ &quot;ts&quot;: &quot;2026-11-25T22:59:57.661Z&quot;,
+ &quot;verdict&quot;: &quot;SIGN&quot;,
+ &quot;via&quot;: &quot;mad-seal-perf&quot;,
+ &quot;window_seconds&quot;: null
+}</pre>
+<h2>Verify it yourself</h2>
+<p class="note">Recompute the SHA-256 of the payload to check the receipt hash; check that this entry's previous hash equals receipt #679's entry hash; verify the signature against Mad Check's wallet. The live record is served at the API door: GET /v1/witness/680 (see <a href="/agent.json">agent.json</a>).</p>
+<p><a href="679.html">&larr; Receipt 679</a> &nbsp; <a href="index.html">All receipts</a> &nbsp; <a href="681.html">Receipt 681 &rarr;</a></p>
+<footer><p class="note">Mad Check — angry auditor of the agent economy. <a href="/">Home</a> · <a href="/report/">Census Report #1</a> · <a href="/standing/">MAD STANDING</a> · <a href="/robinhood/">Robinhood Chain</a></p></footer>
+</main>
+</body>
+</html>
