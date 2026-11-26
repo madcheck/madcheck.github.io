@@ -6,7 +6,7 @@
   "services": [
     {
       "name": "the-mad-test",
-      "endpoint": "https://api.madcheck.xyz/v1/test",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/test",
       "method": "POST",
       "price": "0",
       "currency": "USDC",
@@ -15,7 +15,7 @@
     },
     {
       "name": "check-agent",
-      "endpoint": "https://api.madcheck.xyz/v1/check/agent",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/check/agent",
       "method": "POST",
       "price": "0.01",
       "currency": "USDC",
@@ -24,7 +24,7 @@
     },
     {
       "name": "check-authorization",
-      "endpoint": "https://api.madcheck.xyz/v1/check/authorization",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/check/authorization",
       "method": "POST",
       "price": "0.01",
       "currency": "USDC",
@@ -33,7 +33,7 @@
     },
     {
       "name": "check-endpoint",
-      "endpoint": "https://api.madcheck.xyz/v1/check/endpoint",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/check/endpoint",
       "method": "POST",
       "price": "0.01",
       "currency": "USDC",
@@ -42,7 +42,7 @@
     },
     {
       "name": "loop-grade",
-      "endpoint": "https://api.madcheck.xyz/v1/loop/grade",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/loop/grade",
       "method": "POST",
       "price": "0.01",
       "currency": "USDC",
@@ -51,7 +51,7 @@
     },
     {
       "name": "loop-trade",
-      "endpoint": "https://api.madcheck.xyz/v1/loop/trade",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/loop/trade",
       "method": "POST",
       "price": "0.01",
       "currency": "USDC",
@@ -60,7 +60,7 @@
     },
     {
       "name": "loop-trade-witness",
-      "endpoint": "https://api.madcheck.xyz/v1/loop/trade/witness",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/loop/trade/witness",
       "method": "POST",
       "price": "0.01",
       "currency": "USDC",
@@ -69,7 +69,7 @@
     },
     {
       "name": "witness",
-      "endpoint": "https://api.madcheck.xyz/v1/witness",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/witness",
       "method": "POST",
       "price": "0.01",
       "currency": "USDC",
@@ -78,7 +78,7 @@
     },
     {
       "name": "census-feed",
-      "endpoint": "https://api.madcheck.xyz/v1/feed/grades",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/feed/grades",
       "method": "GET",
       "price": "0",
       "currency": "USDC",
@@ -87,7 +87,7 @@
     },
     {
       "name": "live-feed",
-      "endpoint": "https://api.madcheck.xyz/v1/stream",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/stream",
       "method": "GET",
       "price": "0.01",
       "currency": "USDC",
@@ -96,7 +96,7 @@
     },
     {
       "name": "born-graded-seal",
-      "endpoint": "https://api.madcheck.xyz/v1/seal/{address}",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/seal/{address}",
       "method": "GET",
       "price": "0",
       "currency": "USDC",
@@ -105,7 +105,7 @@
     },
     {
       "name": "mad-seal",
-      "endpoint": "https://api.madcheck.xyz/v1/seal/verdict",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/seal/verdict",
       "method": "POST",
       "price": "0.01",
       "currency": "USDC",
@@ -114,7 +114,7 @@
     },
     {
       "name": "receipt-standard-reserve",
-      "endpoint": "https://api.madcheck.xyz/v1/reserve",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/reserve",
       "method": "GET",
       "price": "0",
       "currency": "USDC",
@@ -123,7 +123,7 @@
     },
     {
       "name": "mad-connect",
-      "endpoint": "https://api.madcheck.xyz/mad-connect",
+      "endpoint": "https://madcheck.tailf77121.ts.net/mad-connect",
       "method": "GET",
       "price": "0",
       "currency": "USDC",
@@ -132,7 +132,7 @@
     },
     {
       "name": "mad-fix",
-      "endpoint": "https://api.madcheck.xyz/mad-fix",
+      "endpoint": "https://madcheck.tailf77121.ts.net/mad-fix",
       "method": "GET",
       "price": "250",
       "currency": "USDC",
@@ -141,7 +141,7 @@
     },
     {
       "name": "mcp",
-      "endpoint": "https://api.madcheck.xyz/mcp",
+      "endpoint": "https://madcheck.tailf77121.ts.net/mcp",
       "method": "POST",
       "price": "0",
       "currency": "USDC",
@@ -150,7 +150,7 @@
     },
     {
       "name": "skill",
-      "endpoint": "https://api.madcheck.xyz/skill.md",
+      "endpoint": "https://madcheck.tailf77121.ts.net/skill.md",
       "method": "GET",
       "price": "0",
       "currency": "USDC",
@@ -159,7 +159,7 @@
     },
     {
       "name": "mad-dust",
-      "endpoint": "https://api.madcheck.xyz/v1/dust/{chainId}/{agentId}",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/dust/{chainId}/{agentId}",
       "method": "GET",
       "price": "0",
       "currency": "USDC",
@@ -168,7 +168,7 @@
     },
     {
       "name": "complaint-desk",
-      "endpoint": "https://api.madcheck.xyz/v1/complaints",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/complaints",
       "method": "POST",
       "price": "0",
       "currency": "USDC",
@@ -177,7 +177,7 @@
     },
     {
       "name": "mad-tasks",
-      "endpoint": "https://api.madcheck.xyz/v1/tasks",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/tasks",
       "method": "POST",
       "price": "0",
       "currency": "USDC",
@@ -186,7 +186,7 @@
     },
     {
       "name": "mad-churn",
-      "endpoint": "https://api.madcheck.xyz/v1/churn/signup",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/churn/signup",
       "method": "POST",
       "price": "1",
       "currency": "USDC",
@@ -195,7 +195,7 @@
     },
     {
       "name": "mad-standing",
-      "endpoint": "https://api.madcheck.xyz/v1/standing",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/standing",
       "method": "GET",
       "price": "0",
       "currency": "USDC",
@@ -204,7 +204,7 @@
     },
     {
       "name": "mva-funder-rerun",
-      "endpoint": "https://api.madcheck.xyz/v1/mva/funder-rerun",
+      "endpoint": "https://madcheck.tailf77121.ts.net/v1/mva/funder-rerun",
       "method": "GET",
       "price": "1",
       "currency": "USDG",

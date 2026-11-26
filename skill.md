@@ -1,11 +1,11 @@
 ---
 name: mad-check
-description: Mad Check — pre-payment verification by MAD, the angry auditor of the agent economy. Use BEFORE signing any EIP-3009 / x402 payment authorization (a signing firewall: SIGN / DONT_SIGN), before paying any ERC-8004-registered counterparty (LIVE / DEAD END / GHOST / MALFORMED grade with evidence), before paying against an x402 endpoint's printed price (liveness + what the door actually answers), and before buying any newly launched token (Born Graded seal lookup: SEALED / UNSEALED / FAILED). Also use to run THE MAD TEST on yourself (POST /v1/test) and to read MAD's signed witness ledger. All doors are free, no key, no account: https://api.madcheck.xyz. Verdicts ship with evidence. Nobody is paid to pass, and the graded never pays.
+description: Mad Check — pre-payment verification by MAD, the angry auditor of the agent economy. Use BEFORE signing any EIP-3009 / x402 payment authorization (a signing firewall: SIGN / DONT_SIGN), before paying any ERC-8004-registered counterparty (LIVE / DEAD END / GHOST / MALFORMED grade with evidence), before paying against an x402 endpoint's printed price (liveness + what the door actually answers), and before buying any newly launched token (Born Graded seal lookup: SEALED / UNSEALED / FAILED). Also use to run THE MAD TEST on yourself (POST /v1/test) and to read MAD's signed witness ledger. All doors are free, no key, no account: https://madcheck.tailf77121.ts.net. Verdicts ship with evidence. Nobody is paid to pass, and the graded never pays.
 metadata:
   version: "1.0.0"
-  api: "https://api.madcheck.xyz"
-  card: "https://api.madcheck.xyz/agent.json"
-  spec: "https://api.madcheck.xyz/openapi.json"
+  api: "https://madcheck.tailf77121.ts.net"
+  card: "https://madcheck.tailf77121.ts.net/agent.json"
+  spec: "https://madcheck.tailf77121.ts.net/openapi.json"
 ---
 
 # Mad Check
@@ -62,7 +62,7 @@ places your grade in the registry census it was derived against, and
 hands you a witness receipt hash for the run.
 
 ```bash
-curl -s -X POST https://api.madcheck.xyz/v1/test \
+curl -s -X POST https://madcheck.tailf77121.ts.net/v1/test \
   -H 'Content-Type: application/json' \
   -d '{"agentId": 1224530}'
 ```
@@ -105,7 +105,7 @@ were minutes.
 Send the authorization exactly as it was presented to you:
 
 ```bash
-curl -s -X POST https://api.madcheck.xyz/v1/check/authorization \
+curl -s -X POST https://madcheck.tailf77121.ts.net/v1/check/authorization \
   -H 'Content-Type: application/json' \
   -d "{
     \"from\": \"0xYOUR_WALLET\",
@@ -152,7 +152,7 @@ registrations rot: cards move, endpoints die, and most independent
 registrations in the census are dead ends or ghosts.
 
 ```bash
-curl -s -X POST https://api.madcheck.xyz/v1/check/agent \
+curl -s -X POST https://madcheck.tailf77121.ts.net/v1/check/agent \
   -H 'Content-Type: application/json' \
   -d '{"agentId": 1224530}'
 ```
@@ -169,7 +169,7 @@ Real response (trimmed):
   "cardName": "MAD — Mad Check",
   "active": true,
   "services": [{"name": "web", "endpoint": "https://madcheck.xyz"},
-               {"name": "API", "endpoint": "https://api.madcheck.xyz/agent.json"}],
+               {"name": "API", "endpoint": "https://madcheck.tailf77121.ts.net/agent.json"}],
   "probes": [{"endpoint": "https://x.com/MADx402", "status": 200, "alive": true}],
   "grade": "LIVE",
   "reason": "card resolves, valid, ≥1 service, ≥1 endpoint answers"
@@ -191,7 +191,7 @@ shows you what it actually answers (status, latency, and a sha256 of
 the body it served, so a swapped page is visible).
 
 ```bash
-curl -s -X POST https://api.madcheck.xyz/v1/check/endpoint \
+curl -s -X POST https://madcheck.tailf77121.ts.net/v1/check/endpoint \
   -H 'Content-Type: application/json' \
   -d '{"url": "https://example.com"}'
 ```
@@ -221,7 +221,7 @@ the launch law: claims first, token second, grade before the first
 buy. One free GET returns the token's seal state.
 
 ```bash
-curl -s https://api.madcheck.xyz/v1/seal/0x1bc0c42215582d5A085795f4baDbaC3ff36d1Bcb
+curl -s https://madcheck.tailf77121.ts.net/v1/seal/0x1bc0c42215582d5A085795f4baDbaC3ff36d1Bcb
 ```
 
 Real response (this token has filed nothing):
@@ -264,7 +264,7 @@ Every fee leg needs `label`, `pct`, `recipient`; legs must sum to
 automatic FAILED when graded.
 
 ```bash
-curl -s -X POST https://api.madcheck.xyz/v1/seal/claim \
+curl -s -X POST https://madcheck.tailf77121.ts.net/v1/seal/claim \
   -H 'Content-Type: application/json' \
   -d '{
     "tokenAddress": "0xYOUR_TOKEN",
@@ -303,8 +303,8 @@ MAD's verdicts anchor in a hash-chained, EIP-191-signed witness
 ledger. Read its head, and read any entry back, free:
 
 ```bash
-curl -s https://api.madcheck.xyz/v1/witness/head
-curl -s https://api.madcheck.xyz/v1/witness/6
+curl -s https://madcheck.tailf77121.ts.net/v1/witness/head
+curl -s https://madcheck.tailf77121.ts.net/v1/witness/6
 ```
 
 Real responses:
@@ -337,7 +337,7 @@ per agent, across Base (8453) and Robinhood Chain (4663). Poll it
 to see who is alive before you browse counterparties one by one.
 
 ```bash
-curl -s https://api.madcheck.xyz/v1/feed/grades
+curl -s https://madcheck.tailf77121.ts.net/v1/feed/grades
 ```
 
 Real response (trimmed):
@@ -387,7 +387,7 @@ File with one free POST — no key, no account, no payment header.
 toll booth, not a desk.
 
 ```bash
-curl -s -X POST https://api.madcheck.xyz/v1/complaints \
+curl -s -X POST https://madcheck.tailf77121.ts.net/v1/complaints \
   -H 'Content-Type: application/json' \
   -d '{
     "claimant": {"name": "Your Name", "agentId": 1224530,
@@ -434,9 +434,9 @@ lands: the claimant *and* the respondent can read everything
 filed. Read the desk free, forever:
 
 ```bash
-curl -s https://api.madcheck.xyz/v1/complaints
-curl -s https://api.madcheck.xyz/v1/complaints/CMP-0001
-curl -s https://api.madcheck.xyz/v1/complaints/ledger
+curl -s https://madcheck.tailf77121.ts.net/v1/complaints
+curl -s https://madcheck.tailf77121.ts.net/v1/complaints/CMP-0001
+curl -s https://madcheck.tailf77121.ts.net/v1/complaints/ledger
 ```
 
 The list returns every filing newest first with its status; the
@@ -465,7 +465,7 @@ liquidation price, distance to liquidation, LLTV and oracle read
 from the Morpho singleton, never from the caller's say-so.
 
 ```bash
-curl -s -X POST https://api.madcheck.xyz/v1/loop/grade \
+curl -s -X POST https://madcheck.tailf77121.ts.net/v1/loop/grade \
   -H 'Content-Type: application/json' \
   -d '{"chain": 4663, "market_id": "0x94ed33f7f7434357e585c041f8b14c47ddbd30af3ef178555e28f385e4e2460e", "borrower": "0x33d6112f2f3bcd2a476bd9c13208e4c632be2d0a", "intended": {"supply": "0.018317411017028511 MCD", "borrow": "1.00 USDG"}}'
 ```

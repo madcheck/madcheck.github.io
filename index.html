@@ -566,7 +566,7 @@
         <div class="sec-head">
           <div class="hero-kicker">Free sample · 5 minutes behind live · Base Mainnet · The C1–C4 hot path, in the open</div>
           <h2>Live Feed — free sample, 5 minutes behind live.</h2>
-          <p>This is MAD's block grader with the cover off. Every Base block gets read the second it lands and run through four checks — <strong>C1 registry touch, C2 contract deployment, C3 flagged address, C4 sender flood</strong> — and the verdict prints here, live. PASS stays one quiet line. A flag does not: C1 and C3 blow open into the full <strong>How / Why / Fix / Evidence</strong>, right in the stream, the second they hit. No reruns, no cherry-picking, no numbers MAD didn't measure — the counters below only move when the stream itself reports them. This is the free look: blocks land here 5 minutes after they grade. The live wire — every block the second it lands — is GET /v1/stream at api.madcheck.xyz, 0.01 USDC per connection via x402. The counts stay live either way.</p>
+          <p>This is MAD's block grader with the cover off. Every Base block gets read the second it lands and run through four checks — <strong>C1 registry touch, C2 contract deployment, C3 flagged address, C4 sender flood</strong> — and the verdict prints here, live. PASS stays one quiet line. A flag does not: C1 and C3 blow open into the full <strong>How / Why / Fix / Evidence</strong>, right in the stream, the second they hit. No reruns, no cherry-picking, no numbers MAD didn't measure — the counters below only move when the stream itself reports them. This is the free look: blocks land here 5 minutes after they grade. The live wire — every block the second it lands — is GET /v1/stream at madcheck.tailf77121.ts.net, 0.01 USDC per connection via x402. The counts stay live either way.</p>
         </div>
         <div class="live-shell" id="live-shell">
           <div class="live-status" role="status" aria-label="Live feed status">
@@ -579,10 +579,10 @@
             <span class="sep" aria-hidden="true">·</span><span>Lag <span id="lf-lag">—</span></span>
           </div>
           <div class="live-window" id="lf-window" aria-live="polite" aria-label="Live block grading stream">
-            <div class="lf-state" id="lf-state"><b>Connecting —</b> opening the free delayed sample at api.madcheck.xyz/v1/stream/sample. Blocks are 5 minutes behind live; the counts are live. No numbers until the stream prints them itself. MAD doesn't invent a single block.</div>
+            <div class="lf-state" id="lf-state"><b>Connecting —</b> opening the free delayed sample at madcheck.tailf77121.ts.net/v1/stream/sample. Blocks are 5 minutes behind live; the counts are live. No numbers until the stream prints them itself. MAD doesn't invent a single block.</div>
           </div>
           <div class="live-controls">
-            <span class="mono">STREAM · https://api.madcheck.xyz/v1/stream/sample (free, 5-min delayed) · live wire /v1/stream — 0.01 USDC per connection via x402 · SSE · C1 REGISTRY_TOUCH · C2 CONTRACT_DEPLOYMENT · C3 FLAGGED_ADDRESS · C4 SENDER_FLOOD</span>
+            <span class="mono">STREAM · https://madcheck.tailf77121.ts.net/v1/stream/sample (free, 5-min delayed) · live wire /v1/stream — 0.01 USDC per connection via x402 · SSE · C1 REGISTRY_TOUCH · C2 CONTRACT_DEPLOYMENT · C3 FLAGGED_ADDRESS · C4 SENDER_FLOOD</span>
             <button type="button" class="btn btn-red" id="lf-pause" aria-pressed="false">❚❚ Pause the feed</button>
           </div>
         </div>
@@ -1601,7 +1601,7 @@ Every claim checked. Nobody paid to pass.
     <script>
       /* ---------- Live Feed — SSE block grader stream (C1–C4) ---------- */
       (function () {
-        var STREAM_URL = "https://api.madcheck.xyz/v1/stream/sample";
+        var STREAM_URL = "https://madcheck.tailf77121.ts.net/v1/stream/sample";
         var MAX_ROWS = 200;
         var win = document.getElementById("lf-window");
         var stateEl = document.getElementById("lf-state");
@@ -1896,7 +1896,7 @@ Every claim checked. Nobody paid to pass.
 
       /* ---------- Tokyo Verified Agents — MAD PASS directory ---------- */
       (function () {
-        var URL = "https://api.madcheck.xyz/v1/tokyo-pass";
+        var URL = "https://madcheck.tailf77121.ts.net/v1/tokyo-pass";
         var TOTAL = 109;
         var topEl = document.getElementById("top-tokyo");
         var sumEl = document.getElementById("tp-summary");
