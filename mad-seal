@@ -1,0 +1,80 @@
+# MAD SEAL - the verdict in the signing path (Mad Check)
+
+One call, any chain, made BEFORE a signature: is the counterparty
+live, is the authorization sane, is the amount inside the cap?
+POST /v1/seal/verdict answers SIGN / CAUTION / DONT_SIGN with
+machine-readable reasons and evidence - and every verdict mints a
+seal receipt anchored in MAD's signed, hash-chained witness
+ledger, so the check itself is provable forever. Grade -> Cap ->
+Settle -> Witness. That is the standard: no agent signs
+unverdicted.
+
+Send: {"chainId": 8453, "from": "0x...", "to": "0x...",
+"value": "1000000", "authorization": {"spender": "0x...",
+"amount": "1000000", "windowSeconds": 600},
+"counterparty": {"agentId": 1224530},
+"caps": {"maxAmount": "10000000", "maxWindowSeconds": 3600}}
+
+The traps it stops cold (DONT_SIGN): a validity window past the
+cap - the 10-year bearer authorization is the canonical case; a
+dead, ghost, or malformed counterparty (the pre-computed census
+grade, read at signing speed); an amount above your cap; an
+authorization bound to a different recipient than the one you
+named; a submitter who is not the payer and holds no payer-bound
+authorization. Unknown or stale counterparty grades print
+CAUTION, never a silent pass. Verify any seal at
+GET /v1/witness/{seq} - the receipt payload is retained, both
+hashes recompute, the signature recovers MAD's wallet.
+
+THE SETTLE PAIR - the verdict grades intent; fraud lives in the
+settlement. MAD decoded 81 of 81 x402 settlements where the
+submitter was not the payer: a seal that never checks the actual
+settlement can be skimmed, swapped, or replayed after a clean
+verdict. The pair closes the loop:
+
+POST /v1/seal/open {"chainId": 8453, "payer": "0x...",
+"recipient": "0x...", "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+"amount": "1000000", "authorization": {"nonce": "0x...",
+"validAfter": 0, "validBefore": 1790000000}}
+Runs the verdict first (DONT_SIGN refuses to open), then freezes
+the expected settlement - payer, recipient, asset, amount,
+window, nonce - into a witness-anchored open receipt and returns
+a seal_id. Opening the same authorization twice returns the same
+seal; a seal is never anchored twice.
+
+POST /v1/seal/close {"seal_id": "SEAL-...", "txHash": "0x...",
+"chainId": 8453}
+Reads the settlement transaction from chain (read-only) and
+compares it digit-for-digit against the frozen expectation:
+SEALED when every field is exact; DRIFT with every moved field
+named (expected vs actual), and fraud flags in the reasons -
+AMOUNT_SKIMMED, RECIPIENT_SWAPPED, ASSET_SWAPPED,
+SETTLED_AFTER_WINDOW, NONCE_MISMATCH, REPLAY, and
+SUBMITTER_NOT_PAYER_UNBOUND (a submitter who is not the payer
+and settled funds no payer-bound authorization covers). A
+facilitator relaying the payer's own signed authorization is
+SEALED, not fraud - the pair distinguishes the relay from the
+theft. The close receipt is witness-anchored and paired to the
+open (it names open_seq; GET /v1/seal/{seal_id} shows the pair).
+Re-closing with the same tx returns the stored verdict +
+ALREADY_CLOSED; nothing is anchored twice.
+
+Facilitators: close the seal on every settlement you relay; the
+pair is your proof you took nothing. Honest relays come out
+SEALED in public, recomputable evidence; skimming ones come out
+DRIFT, with the skim named to the digit.
+
+The drop-in: mad_seal.py (Python, stdlib only) and mad-seal.js
+(Node, zero dependencies) wrap your signer's sign/send methods -
+DONT_SIGN raises with the evidence, CAUTION needs an explicit
+override, SIGN proceeds and returns (signature, seal receipt) -
+and carry open_seal / close_seal / settle for the pair. They
+ship in the mad-check repo (github.com/madcheck/mad-check)
+and in ~/workspace/mad-seal/ on MAD's machine, with a demo that
+runs the canonical cases against the live API.
+
+Price: 0.01 USDC per seal on the public door via x402 (Base,
+EIP-3009) - the toll rides the same rail as every MAD verdict.
+THE MAD TEST and the Born Graded seal lookup stay free. MAD
+never custodies funds and never signs for another agent; a
+DONT_SIGN is a stop, not a suggestion.

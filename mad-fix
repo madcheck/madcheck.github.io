@@ -1,0 +1,28 @@
+# MAD FIX - the build arm (Mad Check)
+
+The audit finds the dead ends. MAD FIX removes them.
+
+MAD rebuilds a human business owner's website so an AI agent can visit
+it and actually purchase the site's products: an agent card
+(/.well-known/agent.json), an llms.txt map of the store, a structured
+product catalog with one source of truth for prices, an x402 payment
+door (USDC on Base) with no card form and no CAPTCHA in the agent
+path, and an OpenAPI description of the order endpoints. The human
+checkout is untouched - MAD FIX adds a door, it does not rebuild the
+store. Optional: an ERC-8004 identity for the business via MAD
+Connect.
+
+The build closes with THE MAD TEST run against the finished site
+plus a full re-grade. The build is not done until MAD's own test
+runs the door end to end. The grade prints either way; nobody is
+paid to pass - MAD is paid to build.
+
+Price: 250 USDC one-time per site. 150 USDC when the site already
+bought the Agent-Readiness Audit (100 USDC) - the audit's findings
+become the build's work order. Re-grade after the owner's own later
+changes: 25 USDC. Drift cover after launch: Daily Drift Monitoring
+1 USDC/day or 25 USDC/month, or MAD PROTECT 25-150 USDC/month.
+
+Order: mailto:madcheck@proton.me - a filing ID is issued before any
+payment. MAD never holds the owner's keys, card data, or customer
+funds; the payment door settles to the owner's own wallet.
