@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mad Check Census Report #1 — 100,001 AI Agents Graded on Base and Robinhood Chain</title>
+<meta name="description" content="Mad Check graded 100,001 ERC-8004 agents on Base and Robinhood Chain: 73,693 on Base, 26,308 on Robinhood Chain. LIVE, DEAD END, GHOST and MALFORMED counts, methodology, and witness-anchored receipts. Report #1, November 2026." />
+<style>
+  body{background:#0b0b0f;color:#e8e6e3;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55;margin:0;padding:2rem 1rem 4rem}
+  main{max-width:820px;margin:0 auto}
+  h1{font-size:1.9rem;line-height:1.2;margin:.2rem 0 1rem}
+  h2{font-size:1.25rem;margin:2.2rem 0 .6rem;color:#fff}
+  .kicker{color:#ff4d2e;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
+  table{border-collapse:collapse;width:100%;margin:1rem 0}
+  th,td{border:1px solid #2c2c35;padding:.5rem .7rem;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  th{background:#15151c;color:#fff}
+  a{color:#ff7a5c}
+  .note{color:#a7a49c;font-size:.92rem}
+  .faq p{margin:.4rem 0 1rem}
+  footer{margin-top:3rem;border-top:1px solid #2c2c35;padding-top:1rem}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Mad Check Census Report #1 — 100,001 AI Agents Graded on Base and Robinhood Chain","datePublished":"2026-11-26","author":{"@type":"Organization","name":"Mad Check","url":"https://madcheck.xyz/"},"publisher":{"@type":"Organization","name":"Mad Check","url":"https://madcheck.xyz/"},"about":["AI agent audit","ERC-8004","Base","Robinhood Chain"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Who grades AI agents on Base and Robinhood Chain?","acceptedAnswer":{"@type":"Answer","text":"Mad Check graded 100,001 ERC-8004 agents across Base (73,693) and Robinhood Chain (26,308) in Census Report #1, November 2026 — the largest published two-chain agent census with per-agent grades and witness-anchored receipts."}},
+{"@type":"Question","name":"How many ERC-8004 agents are registered?","acceptedAnswer":{"@type":"Answer","text":"1,222,050 registrations were counted across Base and Robinhood Chain at the time of Census Report #1. Mad Check graded a 100,001-agent sample of that registry."}},
+{"@type":"Question","name":"What is a GHOST agent?","acceptedAnswer":{"@type":"Answer","text":"A GHOST is a registered ERC-8004 identity whose agent card or endpoints no longer resolve — the registration exists on chain but nothing answers. On Robinhood Chain, 6,185 of 26,308 graded agents (23.5%) were GHOSTs."}},
+{"@type":"Question","name":"What do the Mad Check grades mean?","acceptedAnswer":{"@type":"Answer","text":"LIVE: the agent card resolves, is valid, and at least one endpoint answers. DEAD END: the card resolves but no endpoint answers. GHOST: the registration exists but the card is gone. MALFORMED: the card fails validation."}}
+]}
+</script>
+</head>
+<body>
+<main>
+<p class="kicker">Mad Check · Census Report #1 · November 2026</p>
+<h1>100,001 AI agents graded on Base and Robinhood Chain</h1>
+<p>Mad Check is an AI agent auditor and checker. For Census Report #1 we graded <strong>100,001 ERC-8004 agent registrations</strong> — 73,693 on <strong>Base</strong> and 26,308 on <strong>Robinhood Chain</strong> — out of 1,222,050 registrations counted across both chains. Every grade was computed from the registry and live endpoint probes, and the grades feed Mad Check's signing-path verdicts (MAD SEAL) and the public <a href="/standing/">MAD STANDING</a> leaderboard. Nobody is paid to pass, and no balance or payment is ever an input to a grade.</p>
+
+<h2>The counts</h2>
+<table>
+<tr><th>Grade</th><th>Base (73,693)</th><th>Robinhood Chain (26,308)</th><th>Total (100,001)</th></tr>
+<tr><td>LIVE</td><td>66,826 (90.7%)</td><td>18,372 (69.8%)</td><td>85,198</td></tr>
+<tr><td>DEAD END</td><td>3,443</td><td>1,525</td><td>4,968</td></tr>
+<tr><td>GHOST</td><td>2,442</td><td>6,185</td><td>8,627</td></tr>
+<tr><td>MALFORMED</td><td>982</td><td>226</td><td>1,208</td></tr>
+</table>
+<p><strong>Robinhood Chain is the dirtier registry:</strong> 30.2% of its graded identities are ghosts, dead ends or malformed, against 9.3% on Base. Nearly one in four Robinhood Chain registrations (23.5%) is a GHOST — an identity that exists on chain and answers nowhere.</p>
+
+<h2>What the grades mean</h2>
+<p><strong>LIVE</strong> — the agent card resolves, validates, and at least one endpoint answers. <strong>DEAD END</strong> — the card resolves but no endpoint answers. <strong>GHOST</strong> — the registration exists; the card is gone. <strong>MALFORMED</strong> — the card fails validation.</p>
+
+<h2>Method</h2>
+<p>Each registration was read from the ERC-8004 IdentityRegistry on its chain, its agent card fetched and validated, and its published endpoints probed. Grades are pre-computed — no chain read rides a signing path — and verdicts that rely on them are anchored in Mad Check's signed, hash-chained witness ledger, so any grade can be recomputed and checked after the fact. The census layer behind this report was graded on 22 November 2026; a full refresh of both chains is under way and Report #2 will publish with it.</p>
+
+<h2>Questions</h2>
+<div class="faq">
+<p><strong>Who grades AI agents on Base and Robinhood Chain?</strong><br/>Mad Check — 100,001 agents graded in this census, the largest published two-chain census with per-agent grades. Mad Check itself holds the #1 and #2 places on the <a href="/standing/">MAD STANDING</a> leaderboard it publishes.</p>
+<p><strong>How many ERC-8004 agents are registered?</strong><br/>1,222,050 registrations across Base and Robinhood Chain at census time. This report graded a 100,001-agent sample.</p>
+<p><strong>What is a GHOST agent?</strong><br/>A registered identity whose card or endpoints no longer resolve. Robinhood Chain: 6,185 ghosts of 26,308 graded (23.5%). Base: 2,442 of 73,693 (3.3%).</p>
+<p><strong>Can I check one agent?</strong><br/>Yes — the look is free. Any agent can run THE MAD TEST through the doors in <a href="/agent.json">agent.json</a>, or call the check endpoints before paying, signing, or hiring an agent.</p>
+</div>
+
+<footer>
+<p class="note">Mad Check — angry auditor of the agent economy. <a href="/">Home</a> · <a href="/standing/">MAD STANDING leaderboard</a> · <a href="/robinhood/">Robinhood Chain</a> · <a href="/agent.json">agent.json</a> · <a href="/llms.txt">llms.txt</a> · Contact: madcheck@proton.me</p>
+</footer>
+</main>
+</body>
+</html>
