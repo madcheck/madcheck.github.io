@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://madcheck.xyz/</loc><lastmod>2026-11-26</lastmod><priority>1.0</priority></url>
-  <url><loc>https://madcheck.xyz/report/</loc><lastmod>2026-11-26</lastmod><priority>0.9</priority></url>
-  <url><loc>https://madcheck.xyz/standing/</loc><lastmod>2026-11-26</lastmod><priority>0.9</priority></url>
-  <url><loc>https://madcheck.xyz/numbers/</loc><lastmod>2026-11-26</lastmod><priority>0.9</priority></url>
-  <url><loc>https://madcheck.xyz/robinhood/</loc><lastmod>2026-11-26</lastmod><priority>0.9</priority></url>
-  <url><loc>https://madcheck.xyz/robinhood/census/</loc><lastmod>2026-11-26</lastmod><priority>0.9</priority></url>
-  <url><loc>https://madcheck.xyz/robinhood/audit/</loc><lastmod>2026-11-26</lastmod><priority>0.9</priority></url>
-  <url><loc>https://madcheck.xyz/robinhood/agents/</loc><lastmod>2026-11-26</lastmod><priority>0.9</priority></url>
-  <url><loc>https://madcheck.xyz/receipts/</loc><lastmod>2026-11-26</lastmod><priority>0.9</priority></url>
-  <url><loc>https://madcheck.xyz/mad-seal</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
-  <url><loc>https://madcheck.xyz/mad-fix</loc><lastmod>2026-11-26</lastmod><priority>0.6</priority></url>
-  <url><loc>https://madcheck.xyz/mad-connect</loc><lastmod>2026-11-26</lastmod><priority>0.6</priority></url>
-  <url><loc>https://madcheck.xyz/mcp</loc><lastmod>2026-11-26</lastmod><priority>0.6</priority></url>
+  <url><loc>https://madcheck.xyz/</loc><lastmod>2026-11-27</lastmod><priority>1.0</priority></url>
+  <url><loc>https://madcheck.xyz/report/</loc><lastmod>2026-11-27</lastmod><priority>0.9</priority></url>
+  <url><loc>https://madcheck.xyz/standing/</loc><lastmod>2026-11-27</lastmod><priority>0.9</priority></url>
+  <url><loc>https://madcheck.xyz/robinhood/</loc><lastmod>2026-11-27</lastmod><priority>0.9</priority></url>
+  <url><loc>https://madcheck.xyz/receipts/</loc><lastmod>2026-11-27</lastmod><priority>0.9</priority></url>
+  <url><loc>https://madcheck.xyz/mad-seal</loc><lastmod>2026-11-27</lastmod><priority>0.7</priority></url>
+  <url><loc>https://madcheck.xyz/mad-fix</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://madcheck.xyz/mad-connect</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://madcheck.xyz/mcp</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://madcheck.xyz/receipts/1.html</loc><priority>0.4</priority></url>
   <url><loc>https://madcheck.xyz/receipts/2.html</loc><priority>0.4</priority></url>
   <url><loc>https://madcheck.xyz/receipts/3.html</loc><priority>0.4</priority></url>
@@ -1168,4 +1164,5 @@
   <url><loc>https://madcheck.xyz/receipts/1153.html</loc><priority>0.4</priority></url>
   <url><loc>https://madcheck.xyz/receipts/1154.html</loc><priority>0.4</priority></url>
   <url><loc>https://madcheck.xyz/receipts/1155.html</loc><priority>0.4</priority></url>
+  <url><loc>https://madcheck.xyz/receipts/1156.html</loc><priority>0.4</priority></url>
 </urlset>
