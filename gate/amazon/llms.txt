@@ -1,0 +1,28 @@
+# Amazon — agent gate (DRAFT, built by Mad Check)
+
+> Amazon is the largest US online retailer — marketplace, Prime delivery, groceries and media. This file is the storefront's map for AI
+> agents: what can be browsed, what can be bought, and under what rules.
+
+## For agents
+- Product discovery and checkout are offered to verified agents through the
+  UCP profile at https://www.amazon.com/.well-known/ucp
+- Agents identify themselves with the UCP-Agent header and a public agent
+  profile; anonymous scraping is not the agent door.
+- Orders placed by agents carry the same prices, taxes and return terms as
+  the human storefront.
+
+## Sections
+- [Shop](https://www.amazon.com/gp/)
+- [Help](https://www.amazon.com/gp/help/customer/display.html)
+- [Sell on Amazon](https://sell.amazon.com/)
+
+## Rules for agents
+- Respect robots.txt; the agent door is the UCP endpoint, not the crawl.
+- Payment is by the handlers listed in the UCP profile only.
+- Support for agent orders: see agent.json on this domain.
+
+## About this draft
+Built by Mad Check (madcheck.xyz), the agent checkers, from public
+information on 2026-11-27, after grading this domain's agent readiness
+(FAIL — no agent door; the agent paths serve an explicit AI-agent refusal). It becomes Amazon's own file when served from
+amazon.com; edit freely.

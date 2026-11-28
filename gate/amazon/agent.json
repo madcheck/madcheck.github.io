@@ -1,0 +1,25 @@
+{
+ "name": "Amazon (agent gate \u2014 DRAFT by Mad Check)",
+ "description": "Agent-facing door for Amazon, the largest US online retailer \u2014 marketplace, Prime delivery, groceries and media. Draft built by Mad Check from public information; live only when served from amazon.com.",
+ "url": "https://www.amazon.com",
+ "version": "1.0.0-draft",
+ "capabilities": {
+  "streaming": false,
+  "pushNotifications": false
+ },
+ "skills": [
+  {
+   "id": "ucp-checkout",
+   "name": "UCP checkout",
+   "description": "Browse and check out via the UCP profile at /.well-known/ucp."
+  }
+ ],
+ "contact": {
+  "support": "none published"
+ },
+ "x-mad-check": {
+  "built_by": "Mad Check \u2014 the agent checkers (madcheck.xyz)",
+  "grade_at_build": "FAIL \u2014 no agent door; the agent paths serve an explicit AI-agent refusal",
+  "note": "Draft from public information, 2026-11-27. Adopt, edit, or ignore; it is yours when you serve it."
+ }
+}
