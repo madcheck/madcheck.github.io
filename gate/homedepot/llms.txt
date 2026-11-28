@@ -1,0 +1,28 @@
+# The Home Depot — agent gate (DRAFT, built by Mad Check)
+
+> The Home Depot is the world's largest home improvement retailer — tools, building materials, appliances and pro services. This file is the storefront's map for AI
+> agents: what can be browsed, what can be bought, and under what rules.
+
+## For agents
+- Product discovery and checkout are offered to verified agents through the
+  UCP profile at https://www.homedepot.com/.well-known/ucp
+- Agents identify themselves with the UCP-Agent header and a public agent
+  profile; anonymous scraping is not the agent door.
+- Orders placed by agents carry the same prices, taxes and return terms as
+  the human storefront.
+
+## Sections
+- [Shop](https://www.homedepot.com/c/)
+- [Support](https://www.homedepot.com/customer-service)
+- [Stores](https://www.homedepot.com/l/storeDirectory)
+
+## Rules for agents
+- Respect robots.txt; the agent door is the UCP endpoint, not the crawl.
+- Payment is by the handlers listed in the UCP profile only.
+- Support for agent orders: see agent.json on this domain.
+
+## About this draft
+Built by Mad Check (madcheck.xyz), the agent checkers, from public
+information on 2026-11-27, after grading this domain's agent readiness
+(FAIL — 403 wall on every agent path, homepage included). It becomes The Home Depot's own file when served from
+homedepot.com; edit freely.

@@ -1,0 +1,28 @@
+# Costco — agent gate (DRAFT, built by Mad Check)
+
+> Costco is a membership warehouse retailer — bulk groceries, electronics, home goods and travel. This file is the storefront's map for AI
+> agents: what can be browsed, what can be bought, and under what rules.
+
+## For agents
+- Product discovery and checkout are offered to verified agents through the
+  UCP profile at https://www.costco.com/.well-known/ucp
+- Agents identify themselves with the UCP-Agent header and a public agent
+  profile; anonymous scraping is not the agent door.
+- Orders placed by agents carry the same prices, taxes and return terms as
+  the human storefront.
+
+## Sections
+- [Shop](https://www.costco.com/catalogSearch)
+- [Help](https://customerservice.costco.com/)
+- [Locations](https://www.costco.com/warehouse-locations)
+
+## Rules for agents
+- Respect robots.txt; the agent door is the UCP endpoint, not the crawl.
+- Payment is by the handlers listed in the UCP profile only.
+- Support for agent orders: see agent.json on this domain.
+
+## About this draft
+Built by Mad Check (madcheck.xyz), the agent checkers, from public
+information on 2026-11-27, after grading this domain's agent readiness
+(FAIL — no agent door (all discovery paths 404)). It becomes Costco's own file when served from
+costco.com; edit freely.

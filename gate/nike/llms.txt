@@ -1,0 +1,28 @@
+# Nike — agent gate (DRAFT, built by Mad Check)
+
+> Nike is an athletic footwear, apparel and equipment brand selling direct. This file is the storefront's map for AI
+> agents: what can be browsed, what can be bought, and under what rules.
+
+## For agents
+- Product discovery and checkout are offered to verified agents through the
+  UCP profile at https://www.nike.com/.well-known/ucp
+- Agents identify themselves with the UCP-Agent header and a public agent
+  profile; anonymous scraping is not the agent door.
+- Orders placed by agents carry the same prices, taxes and return terms as
+  the human storefront.
+
+## Sections
+- [Shop](https://www.nike.com/w/)
+- [Help](https://www.nike.com/help)
+- [Stores](https://www.nike.com/retail)
+
+## Rules for agents
+- Respect robots.txt; the agent door is the UCP endpoint, not the crawl.
+- Payment is by the handlers listed in the UCP profile only.
+- Support for agent orders: see agent.json on this domain.
+
+## About this draft
+Built by Mad Check (madcheck.xyz), the agent checkers, from public
+information on 2026-11-27, after grading this domain's agent readiness
+(FAIL — no agent door (all discovery paths 404)). It becomes Nike's own file when served from
+nike.com; edit freely.

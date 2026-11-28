@@ -1,0 +1,29 @@
+# Walmart — agent gate (DRAFT, built by Mad Check)
+
+> Walmart is the largest US retailer — groceries, electronics, home, pharmacy and everyday goods. This file is the storefront's map for AI
+> agents: what can be browsed, what can be bought, and under what rules.
+
+## For agents
+- Product discovery and checkout are offered to verified agents through the
+  UCP profile at https://www.walmart.com/.well-known/ucp
+- Agents identify themselves with the UCP-Agent header and a public agent
+  profile; anonymous scraping is not the agent door.
+- Orders placed by agents carry the same prices, taxes and return terms as
+  the human storefront.
+
+## Sections
+- [Shop](https://www.walmart.com/shop)
+- [Grocery](https://www.walmart.com/grocery)
+- [Help Center](https://www.walmart.com/help)
+- [Stores](https://www.walmart.com/store-directory)
+
+## Rules for agents
+- Respect robots.txt; the agent door is the UCP endpoint, not the crawl.
+- Payment is by the handlers listed in the UCP profile only.
+- Support for agent orders: see agent.json on this domain.
+
+## About this draft
+Built by Mad Check (madcheck.xyz), the agent checkers, from public
+information on 2026-11-27, after grading this domain's agent readiness
+(FAIL — no agent door (all discovery paths 404)). It becomes Walmart's own file when served from
+walmart.com; edit freely.

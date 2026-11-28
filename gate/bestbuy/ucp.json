@@ -1,0 +1,64 @@
+{
+ "ucp": {
+  "version": "2026-01-23",
+  "services": {
+   "dev.ucp.shopping": [
+    {
+     "version": "2026-01-23",
+     "spec": "https://ucp.dev/specification/overview",
+     "transport": "rest",
+     "endpoint": "https://www.bestbuy.com/api/ucp",
+     "schema": "https://ucp.dev/2026-01-23/services/shopping/openapi.json"
+    }
+   ]
+  },
+  "capabilities": {
+   "dev.ucp.shopping.checkout": [
+    {
+     "version": "2026-01-23",
+     "spec": "https://ucp.dev/specification/checkout",
+     "schema": "https://ucp.dev/2026-01-23/schemas/shopping/checkout.json"
+    }
+   ],
+   "dev.ucp.shopping.fulfillment": [
+    {
+     "version": "2026-01-23",
+     "spec": "https://ucp.dev/specification/fulfillment",
+     "schema": "https://ucp.dev/2026-01-23/schemas/shopping/fulfillment.json",
+     "extends": "dev.ucp.shopping.checkout"
+    }
+   ]
+  },
+  "payment_handlers": {
+   "com.google.pay": [
+    {
+     "id": "gpay",
+     "version": "2026-01-23",
+     "spec": "https://pay.google.com/gp/p/ucp/2026-01-23/",
+     "config_schema": "https://pay.google.com/gp/p/ucp/2026-01-23/schemas/config.json",
+     "instrument_schemas": [],
+     "config": {
+      "environment": "PRODUCTION"
+     }
+    }
+   ],
+   "x402": [
+    {
+     "id": "x402-usdc",
+     "version": "2",
+     "note": "SECOND RAIL (the fix): agent-native settlement in USDC via x402, so agents that are not Google's can also pay."
+    }
+   ]
+  },
+  "agent_registration": {
+   "note": "THE CREDENTIAL PATH (the fix): publish how an agent gets credentials \u2014 self-serve key issuance or a registration endpoint \u2014 here, in the profile, where agents look.",
+   "endpoint": "https://www.bestbuy.com/api/ucp/register"
+  }
+ },
+ "signing_keys": [],
+ "x-mad-check": {
+  "built_by": "Mad Check (madcheck.xyz)",
+  "grade_at_build": "FAIL \u2014 no agent door (404s serve a 315 KB storefront page)",
+  "note": "Skeleton from the public UCP spec. Fill signing_keys with your ES256 keys; the two 'fix' blocks are the parts the grade found missing."
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "name": "Target (agent gate \u2014 DRAFT by Mad Check)",
+ "description": "Agent-facing door for Target, a leading US retailer \u2014 everyday essentials, seasonal merchandise, groceries and apparel. Draft built by Mad Check from public information; live only when served from target.com.",
+ "url": "https://www.target.com",
+ "version": "1.0.0-draft",
+ "capabilities": {
+  "streaming": false,
+  "pushNotifications": false
+ },
+ "skills": [
+  {
+   "id": "ucp-checkout",
+   "name": "UCP checkout",
+   "description": "Browse and check out via the UCP profile at /.well-known/ucp."
+  }
+ ],
+ "contact": {
+  "support": "guest.service@target.com"
+ },
+ "x-mad-check": {
+  "built_by": "Mad Check \u2014 the agent checkers (madcheck.xyz)",
+  "grade_at_build": "CAUTION \u2014 real llms.txt, no transaction door",
+  "note": "Draft from public information, 2026-11-27. Adopt, edit, or ignore; it is yours when you serve it."
+ }
+}

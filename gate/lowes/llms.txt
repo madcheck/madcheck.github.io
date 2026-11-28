@@ -1,0 +1,28 @@
+# Lowe's — agent gate (DRAFT, built by Mad Check)
+
+> Lowe's is a home improvement retailer — appliances, tools, building supplies and garden. This file is the storefront's map for AI
+> agents: what can be browsed, what can be bought, and under what rules.
+
+## For agents
+- Product discovery and checkout are offered to verified agents through the
+  UCP profile at https://www.lowes.com/.well-known/ucp
+- Agents identify themselves with the UCP-Agent header and a public agent
+  profile; anonymous scraping is not the agent door.
+- Orders placed by agents carry the same prices, taxes and return terms as
+  the human storefront.
+
+## Sections
+- [Shop](https://www.lowes.com/c/)
+- [Support](https://www.lowes.com/l/help)
+- [Stores](https://www.lowes.com/store/)
+
+## Rules for agents
+- Respect robots.txt; the agent door is the UCP endpoint, not the crawl.
+- Payment is by the handlers listed in the UCP profile only.
+- Support for agent orders: see agent.json on this domain.
+
+## About this draft
+Built by Mad Check (madcheck.xyz), the agent checkers, from public
+information on 2026-11-27, after grading this domain's agent readiness
+(FAIL — total wall: every path 403, robots.txt included). It becomes Lowe's's own file when served from
+lowes.com; edit freely.
